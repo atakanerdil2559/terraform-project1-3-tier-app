@@ -1,5 +1,5 @@
 output "vpc_id"   { 
-value = "${data.terraform_remote_state.dev.VPC_ID}"
+value = "${data.terraform_remote_state.dev.VPC_ID}"   # ????
 
 }
 
@@ -32,6 +32,6 @@ output "Private_Subnet3" {
 
 
 output "aws_internet_gateway"  {
-    value      = "${data.terraform_remote_state.dev.IGW}"
+    value      = "${data.terraform_remote_state.dev.IGW}"      #????
 
 }
