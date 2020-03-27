@@ -45,4 +45,4 @@ data "aws_ami" "ubuntu" {
       propagate_at_launch = true
     },
   ]
-
+}
