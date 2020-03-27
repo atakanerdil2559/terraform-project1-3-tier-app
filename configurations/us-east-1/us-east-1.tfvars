@@ -1,12 +1,3 @@
-
-
-
-## ??????
-
-
-
-
-
 #Provide a region for VPC
 environment                     =   "virginia"
 region                          =   "us-east-1"

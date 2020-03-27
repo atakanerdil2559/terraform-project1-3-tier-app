@@ -35,3 +35,13 @@ output "aws_internet_gateway"  {
     value      = "${data.terraform_remote_state.dev.IGW}"      #????
 
 }
+
+
+
+   
+
+   
+
+  # vpc_security_group_ids = ["${data.terraform_remote_state.mysql.sec_group_2}"]
+  # vpc_security_group_ids = ["${data.terraform_remote_state.mysql.sec_group_1}"]
+  # db_subnet_group_name = "${aws_db_subnet_group.default.name}"
