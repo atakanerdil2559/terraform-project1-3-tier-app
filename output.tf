@@ -38,7 +38,7 @@ output "web_sec_group" {
 
 
 output "Team1_Output_sec_group" {
-  value = "${data.terraform_remote_state.dev.sec_group_1}"
+  value = "${data.terraform_remote_state.dev.sec_group_2}"
 }
 
 

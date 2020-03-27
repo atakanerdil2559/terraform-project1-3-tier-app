@@ -1,4 +1,7 @@
 # Creates ASG with launch configuration
+data "aws_ami" "ubuntu" {
+  most_recent = true
+}
 
 module "dev" {                                                      ### ??
   name = "wordpress"
@@ -10,8 +13,9 @@ module "dev" {                                                      ### ??
   lc_name = "wordpress-lc"
   image_id        = "${data.aws_ami.ubuntu.id}"                      ### ???
   instance_type   = "t2.micro"
-  security_groups =["${aws_security_group.web_sec_group.id}"]        ## ???
-  security_groups =["${aws_security_group.mysql_sec_group.id}"]      ## ???
+  security_groups =["${data.terraform_remote_state.dev.sec_group_1}"] 
+  security_groups =["${data.terraform_remote_state.dev.sec_group_2}"]        
+  
 
 
   # Auto scaling group
