@@ -2,14 +2,14 @@
  data "terraform_remote_state" "VPC"  {                        
   backend = "s3"
   config = {
-    bucket = "terraform-project-backend-2020"
+    bucket = "terraform-project1-team4"
     key    = "tower/us-east-1/tools/virginia/new-tower.tfstate"
     region = "us-east-1"
   }
 }
 
 output "VPC_ID" {
-  value       = "${data.terraform_remote_state.VPC_ID}"
+  value       = "${data.terraform_remote_state.dev.VPC_ID}"
 }
 
 ## Public Subnets
@@ -38,7 +38,7 @@ output "Private_Subnet3" {
 data "terraform_remote_state" "DB"  {                            
   backend = "s3"
   config = {
-    bucket = "terraform-project-backend-2020-team2"
+    bucket = "terraform-project1-team4"
     key = "team2/us-east-1/tools/N.Virginia/team2.tfstate"
     region = "us-east-1"
   }
@@ -56,12 +56,15 @@ output "Reader_aws_rds_endpoint" {
 
 
 
-output "web_sec_group"  {
+output "sec_group_1"  {
   value      = "${data.terraform_remote_state.web_sec_group.id}"
 }
 
 
-output "mysql_sec_group"  {
+output "sec_group_2"  {
   value      = "${data.terraform_remote_state.mysql_sec_group.id}"
 }
 
+output "IGW" {
+    value = "${data.terraform_remote_state.dev.IGW}"
+}
