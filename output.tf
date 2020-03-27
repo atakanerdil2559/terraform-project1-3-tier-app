@@ -32,25 +32,25 @@ output "Private_Subnet3" {
 
 
 
-
-
-output "writer_aws_rds_endpoint" {
-  value       = "${data.terraform_remote_state.mydb.writer_aws_rds_endpoint}"
-}
-output "Reader_aws_rds_endpoint" {
-  value       = "${data.terraform_remote_state.mydb.Reader_aws_rds_endpoint}" 
+output "web_sec_group" {
+  value = "${data.terraform_remote_state.dev.sec_group_1}"
 }
 
 
 output "Team1_Output_sec_group" {
-  value = "${data.terraform_remote_state.dev.web_sec_group}"
+  value = "${data.terraform_remote_state.dev.sec_group_1}"
+}
+
+
+output "writer_aws_rds_endpoint" {
+  value       = "${data.terraform_remote_state.DB.writer_aws_rds_endpoint}"
+}
+output "Reader_aws_rds_endpoint" {
+  value       = "${data.terraform_remote_state.DB.Reader_aws_rds_endpoint}" 
 }
 
 
 
-output "mysql-sec-group"  {
-  value      = "${data.terraform_remote_state.dev.mysql_sec_group}"
-}
 
 
 

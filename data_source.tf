@@ -3,7 +3,7 @@
   backend = "s3"
   config = {
     bucket = "terraform-project1-team4"
-    key = "tower/us-east-1/tools/virginia/new-tower-team1.tfstate"
+    key = "tower/us-east-1/tools/virginia/team-1-dont-overwrite.tfstate"
     region = "us-east-1"
   }
 }
