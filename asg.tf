@@ -1,17 +1,30 @@
 # Creates ASG with launch configuration
+#Gets ubuntu AMI information
+
 data "aws_ami" "ubuntu" {
   most_recent = true
-}
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
 
 module "dev" {                                                      ### ??
   name = "wordpress"
   source = "terraform-aws-modules/autoscaling/aws"
   version = "2.12.0"
-
+}
   # Launch configuration
   
   lc_name = "wordpress-lc"
-  image_id        = "${data.aws_ami.ubuntu.id}"                      ### ???
+  image_id        = "${data.aws_ami.ubuntu.id}"
   instance_type   = "t2.micro"
   security_groups =["${data.terraform_remote_state.dev.sec_group_1}"] 
   security_groups =["${data.terraform_remote_state.dev.sec_group_2}"]        
