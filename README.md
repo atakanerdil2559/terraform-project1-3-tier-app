@@ -34,7 +34,20 @@
 # terraform apply -var-file configurations/us-east-1/us-east-1.tfvars
 
 
+<!-- Outputs:
 
+IGW = igw-0fdfdc75e26cdf553
+Private_Subnet1 = subnet-0ceb94787e34eae11
+Private_Subnet2 = subnet-0ba74c429e0c151d7
+Private_Subnet3 = subnet-0ca6029b3ca44ec5c
+Reader_aws_rds_endpoint = Reader mysqldb-team2.cluster-ro-ckhudyx0jjty.us-east-1.rds.amazonaws.com
+Subnet1 = subnet-0d3d91e79ddef4afb
+Subnet2 = subnet-04dcb85f05c34d108
+Subnet3 = subnet-0ea3e27c837e42b3d
+Team1_Output_sec_group = sg-06b99f48d655e0118
+VPC_ID = vpc-0773057c03e66eeb5
+web_sec_group = sg-0241e0b9d7d8053b3
+writer_aws_rds_endpoint = Writer mysqldb-team2.cluster-ckhudyx0jjty.us-east-1.rds.amazonaws.com -->
 
 
 
