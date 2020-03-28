@@ -37,8 +37,8 @@ resource "aws_elb" "wordpress" {
   }
 }
 
-resource "aws_autoscaling_attachment" "wordpress" {    ## ???
-    autoscaling_group_name = "${module.dev.this_autoscaling_group_id}"    # ?????
+resource "aws_autoscaling_attachment" "wordpress" {   
+    autoscaling_group_name = "${module.dev.this_autoscaling_group_id}"    
     elb                    = "${aws_elb.wordpress.name}"
 
 }
