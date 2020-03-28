@@ -27,6 +27,7 @@
 
 # source setenv.sh configurations/us-east-1/us-east-1.tfvars 
 # terraform apply -var-file configurations/us-east-1/us-east-1.tfvars
+
 <!-- Outputs:
 
 IGW = igw-0fdfdc75e26cdf553
