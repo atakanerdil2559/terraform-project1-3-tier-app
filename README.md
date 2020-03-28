@@ -10,10 +10,7 @@
 
 # It will use the database info from the Team-2 (the second team reads the team one's .tfstatefile too , 
 # by using data_source.tf for their VPC info)
-
 # https://github.com/Taniusellu/team2-project-terraform.git
-
-
 
 
 # you need to have the following requirements for Terraform:
@@ -24,16 +21,12 @@
 # required_providers = "~> 2.2"
 
 # you need to clone the repo:
-
 # git clone  https://github.com/sezginmutlu/terraform-project1-3-tier-app.git
 
 # Once the repo is cloned you can run the following commands to see the outputs and to create the 3-tier app, which uses the infor from team-1 and team-2
 
 # source setenv.sh configurations/us-east-1/us-east-1.tfvars 
-
 # terraform apply -var-file configurations/us-east-1/us-east-1.tfvars
-
-
 <!-- Outputs:
 
 IGW = igw-0fdfdc75e26cdf553
