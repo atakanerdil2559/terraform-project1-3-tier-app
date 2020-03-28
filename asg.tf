@@ -56,7 +56,9 @@ version = "2.12.0"
   max_size                  = 48
   desired_capacity          = 3
   wait_for_capacity_timeout = 0
-  user_data = "yum install httpd -y; systemctl start httpd; systemctl enable httpd"
+  user_data = "${file("./wordpress.sh")}"
+  
+  # "${file("wordpress.sh")}"
 
   tags = [
     {

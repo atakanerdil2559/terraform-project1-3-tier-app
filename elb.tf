@@ -6,6 +6,10 @@ resource "aws_elb" "wordpress" {
                                "${data.terraform_remote_state.dev.Subnet2}",
                                "${data.terraform_remote_state.dev.Subnet3}",
                         ]
+  security_groups = [
+    "${data.terraform_remote_state.dev.sec_group_1}",
+    "${data.terraform_remote_state.dev.sec_group_2}"
+  ]
   listener {
     instance_port     = 80
     instance_protocol = "http"

@@ -16,3 +16,4 @@ s3_folder_project               =   "team4"
 s3_folder_type                  =   "tools"
 s3_tfstate_file                 =   "team4.tfstate"
 
+environment                     =   "dev"

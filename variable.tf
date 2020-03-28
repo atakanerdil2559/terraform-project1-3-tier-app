@@ -6,3 +6,4 @@ variable    "az2"        {}
 variable    "az3"        {}   
 
 
+variable     "environment" {}
