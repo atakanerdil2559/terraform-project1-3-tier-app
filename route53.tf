@@ -4,4 +4,3 @@
 #   type    = "A"
 #   ttl     = "60"
 #   records = ["${aws_elb.wordpress.}"]
-# }
